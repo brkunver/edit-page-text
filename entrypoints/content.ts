@@ -15,16 +15,16 @@ export default defineContentScript({
 })
 
 function enableEditMode() {
-  let elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6")
+  let elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6,li,textarea,input,button,span")
   elements.forEach(el => {
     const htmlEl = el as HTMLElement
     htmlEl.setAttribute("contenteditable", "true")
-    htmlEl.style.outline = "1px dashed red"
+    htmlEl.style.outline = "1px dashed orange"
   })
 }
 
 function disableEditMode() {
-  let elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6")
+  let elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6,li,textarea,input,button,span")
   elements.forEach(el => {
     const htmlEl = el as HTMLElement
     htmlEl.removeAttribute("contenteditable")
