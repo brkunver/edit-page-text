@@ -4,7 +4,7 @@ import { defineConfig } from "wxt"
 export default defineConfig({
   manifest: {
     name: "Edit Page Text",
-    description: "Edit page text",
+    description: "Edit texts in web pages easily",
     permissions: ["activeTab", "scripting"],
   },
   webExt: {
